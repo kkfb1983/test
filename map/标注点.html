@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA4FG41m0RlufUy9BoCihvSH9FSCowWlNo&sensor=false"></script>
+    <script type="text/javascript">
+    	
+		function initialize() {
+  var myLatlng = new google.maps.LatLng(37.06, -95.68);
+  var mapOptions = {
+    zoom: 12,
+    center: myLatlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+  var kmlLayer = new google.maps.KmlLayer({
+    url: 'http://kml-samples.googlecode.com/svn/trunk/kml/Placemark/placemark.kml',
+    suppressInfoWindows: true,
+    map: map
+  });
+
+  google.maps.event.addListener(kmlLayer, 'click', function(kmlEvent) {
+    var text = kmlEvent.featureData.description;
+    showInContentWindow(text);
+  });
+
+  function showInContentWindow(text) {
+    var sidediv = document.getElementById('content-window');
+    sidediv.innerHTML = text;
+  }
+}
+
+google.maps.event.addDomListener(window, 'load', initialize)
+		
+//      function initialize() {
+//        var mapOptions = {
+//          center: new google.maps.LatLng(39.95483, 116.469556),
+//          zoom: 12,
+//          mapTypeId: google.maps.MapTypeId.ROADMAP
+//        };
+//        var map = new google.maps.Map(document.getElementById("map_canvas"),
+//            mapOptions);
+//      }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map-canvas" style="width:100%; height:100%"></div>
+  </body>
+</html>

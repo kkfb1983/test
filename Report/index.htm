@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id="canvas" style="background-color: #c7c7c7" width="1000" height="800">
+    默任值
+</canvas>
+<script src="../js/jquery.js"></script>
+<script src="canvas.js"></script>
+<script>
+    window.onload = function (){
+        var o = new canvas('canvas');
+        var arcAction = 0;
+        // 典线实例
+        var arcId = setInterval(function (){
+            var pi = Math.PI;
+            var color = new Array('yellow','green','red','blue');
+            var arc = [[1.7,1.9],[1.9,0.1],[0.1,0.3],[0.3,0.5]];
+            o.curve(150,150,100,arc[arcAction][0]*pi,arc[arcAction][1]*pi,5,color[arcAction]);
+            arcAction ++;
+            if(arcAction == color.length){
+                clearInterval(arcId);
+            }
+        },60);
+
+
+        // 实心圆
+        o.circle(230,450,100,Math.PI,2*Math.PI,5,'#000',"red");
+    }
+</script>
+</body>
+</html>

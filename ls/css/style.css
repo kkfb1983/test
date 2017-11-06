@@ -1,0 +1,50 @@
+.txt {
+	font-size: 13px;
+	background-color: #D9EDFF;
+	border-top-color: #6CF;
+	border-right-color: #6CF;
+	border-bottom-color: #6CF;
+	border-left-color: #6CF;
+	width:150px;
+}
+
+.txtCode{
+	font-size: 13px;
+	background-color: #D9EDFF;
+	border-top-color: #6CF;
+	border-right-color: #6CF;
+	border-bottom-color: #6CF;
+	border-left-color: #6CF;
+	width:50px;
+}
+
+.disDiv {
+	font-size: 13px;
+	z-index: 3;
+	position: absolute;
+	border: 1px solid #FFC30E;
+	padding: 5px;
+	background-color: #FFFBB8;
+	text-align: left;
+	color: #9C7600;
+	display:none;
+	width: 260px;
+	height: 13px;
+	left: 790px;
+
+}
+.errDiv {
+	font-size: 13px;
+	z-index: 3;
+	position: absolute;
+	border: 1px solid #FFC30E;
+	padding: 5px;
+	background-color: #FFC8D5;
+	text-align: left;
+	color: #FD4066;
+	display:none;
+	width: 90px;
+	height: 13px;
+	left: 790px;
+
+}

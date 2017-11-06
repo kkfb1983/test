@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" id="btn" value="重新绑定" onclick="anew();">
+<input type="button" id="echo" value="打印" onclick="a(this);" >
+<script src="../js/jquery.js"></script>
+<script>
+    function anew(){
+        $('#echo').attr('disabled',false);
+//        document.getElementById("echo").disabled=false;
+    }
+    function a(o){
+//        document.getElementById("echo").disabled=true;
+        $('#echo').attr('disabled',true);
+        alert('print yes! bind funcation '+$('#echo').attr('onclick'));
+    }
+</script>
+</body>
+</html>

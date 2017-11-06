@@ -1,0 +1,18 @@
+<?php 
+
+
+
+function exportCsv($filename='未命名',$title=array(),$inputText=array()){
+	$content = '';
+	header("Content-type:text/csv");
+	header("Content-Disposition:attachment;filename=".$filename);
+	header('Cache-Control:must-revalidate,post-check=0,pre-check=0');
+	header('Expires:0');
+	header('Pragma:public');
+	$content = implode(',', $title)."\n";
+	if(!empty($inputText)){
+		foreach($inputText as $val){
+			$content .= implode(',', $val)."\n";
+	}
+	iconv('utf-8','gb2312',$content);
+}

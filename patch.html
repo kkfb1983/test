@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body id="default">
+<script src="js/jquery.js"></script>
+
+<form id="frm1" action="index.php">
+    <input name="sex" type="radio" value="man"/>
+First name: <input type="text" name="fname" value="Donald"><br>
+Last name: <input type="text" name="lname" value="Duck"><br>
+<input type="submit" value="Submit">
+    <select name="myselect">
+        <option value="testselect" selected>aaa </option>
+    </select>
+    <textarea id="u134_input" name="mycontent">1.活动有效期XXXXXXXX
+2.超过有效期.、目标任务下线将无法接取并领取
+奖金，请及时接取。
+3.作弊以及未按规定删除任务将失去获奖资格。
+4.活动奖励将于次日系统更新后自动发送至您的账号</textarea>
+</form>  
+
+<script>
+
+var patch = function(id,url,fun){
+    var p = {};
+    this.analyseFrom = function(){
+        $(id).each(function(i,v){
+            if(v.name && v.value && v.value != 'submit' && v.value != 'button'){
+                p[v.name] = v.value;
+            }
+        });
+    },
+    this.callback = function(c){
+        this.analyseFrom();
+        $.post(url,p,function(r){
+            c(r);
+        });
+    };
+    return this.callback(fun);
+}
+
+    patch(':input','index.php',function(data){
+        alert(data.mycontent);
+    });
+
+
+</script>
+</body>
+</html>

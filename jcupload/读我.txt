@@ -1,0 +1,9 @@
+jcupload 例子
+
+这是一个jcupload多文件上 传的例子。
+1.可以用ctrl ,shift键同时选多件文件。不敢独享，所以拿出来共享了。 
+2.按add files按钮便可选文件，选后会自动上传。
+3.接收文件的处理程序是upload.php,它每次只处理一个上传请求。 
+
+-----
+http://www.wudimei.com 我用php写的一个网店

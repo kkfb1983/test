@@ -1,0 +1,271 @@
+[ 2016-10-27T17:56:31+08:00 ] 127.0.0.1 /admin/manage/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+NOTIC: [8] Undefined variable: roleinfo /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/BaseController.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `weiq_manager_user` [ RunTime:0.0034s ]
+SQL: SELECT `id`,`username`,`truename` FROM `weiq_manager_user` WHERE (  status=0 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013052s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012491s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012586s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001162s ]
+
+[ 2016-10-27T17:56:32+08:00 ] 127.0.0.1 /admin/manage/get_authcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+NOTIC: [8] Undefined variable: roleinfo /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/BaseController.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `weiq_manager_user` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`username`,`truename` FROM `weiq_manager_user` WHERE (  status=0 )  [ RunTime:0.0008s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /svr/htdocs/wechat/branches/ppe/ThinkPHP/Library/Vendor/Authcode/lcode/Wadmincode.class.php 第 3 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000971s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001133s ]
+
+[ 2016-10-27T17:56:36+08:00 ] 127.0.0.1 /admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+NOTIC: [8] Undefined variable: roleinfo /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/BaseController.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `weiq_manager_user` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`username`,`truename` FROM `weiq_manager_user` WHERE (  status=0 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000813s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2016-10-27T17:56:39+08:00 ] 127.0.0.1 /admin/task/unchecklist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+NOTIC: [8] Undefined variable: roleinfo /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/BaseController.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `weiq_manager_user` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`username`,`truename` FROM `weiq_manager_user` WHERE (  status=0 )  [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant ENVIRONMENT - assumed 'ENVIRONMENT' /svr/htdocs/wechat/branches/ppe/Application/Publicpart/Controller/AppsendmsgController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant ENVIRONMENT - assumed 'ENVIRONMENT' /svr/htdocs/wechat/branches/ppe/Application/Publicpart/Controller/AppsendmsgController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `weiq_cpt_task` [ RunTime:0.0303s ]
+SQL: SELECT COUNT(*) AS tp_count FROM weiq_cpt_task a INNER JOIN weiq_cpt_user as u on a.payerid=u.id  WHERE a.status = '1' AND a.plattype = '0' ORDER BY a.createtime desc LIMIT 1   [ RunTime:0.0268s ]
+SQL: SELECT a.id,a.taskname,a.wxtitle,a.type,a.paytype,a.plattype,a.createtime,a.starttime,a.payerid,a.managerid,a.status,a.identifier,a.reason,u.username FROM weiq_cpt_task a INNER JOIN weiq_cpt_user as u on a.payerid=u.id  WHERE a.status = '1' AND a.plattype = '0' ORDER BY a.createtime desc LIMIT 0,10   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `weiq_cpt_taskorder` [ RunTime:0.0409s ]
+SQL: SELECT `taskid`,count(id) as orderrows,SUM(realadprice) as total_price,`wxtype` FROM `weiq_cpt_taskorder` WHERE `taskid` IN ('1245') GROUP BY taskid ORDER BY starttime desc  [ RunTime:0.0616s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TaskController.class.php 第 110 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TaskController.class.php 第 111 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TaskController.class.php 第 119 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TaskController.class.php 第 120 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028935s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001149s ]
+
+[ 2016-10-27T17:56:58+08:00 ] 127.0.0.1 /admin/tasksquare/task_all.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+NOTIC: [8] Undefined variable: roleinfo /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/BaseController.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `weiq_manager_user` [ RunTime:0.0067s ]
+SQL: SELECT `id`,`username`,`truename` FROM `weiq_manager_user` WHERE (  status=0 )  [ RunTime:0.0007s ]
+NOTIC: [2] Missing argument 1 for I(), called in /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php on line 2154 and defined /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `weiq_cpt_task` [ RunTime:0.0067s ]
+NOTIC: [8] Undefined variable: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2160 行.
+SQL: SELECT COUNT(*) AS tp_count FROM weiq_cpt_task t WHERE (  t.paytype=10  ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT t.id,t.taskname,t.type,t.paytype,t.plattype,t.status,t.createtime,t.managerid,cti.fee,cti.balance,GROUP_CONCAT(tc.id) as contentid FROM `weiq_cpt_task` as t LEFT JOIN weiq_cpc_taskinfo as cti ON cti.taskid = t.id left join weiq_cpc_taskcontent as tc on t.id=tc.taskid  WHERE (  t.paytype=10  ) GROUP BY t.id ORDER BY t.starttime desc LIMIT 0,10   [ RunTime:0.0442s ]
+SQL: SHOW COLUMNS FROM `weiq_task_cpc` [ RunTime:0.0154s ]
+SQL: SELECT * FROM `weiq_task_cpc` WHERE ( taskid in(1322,1321,1320,1319,1318,1317,1316,1315,1314,1313) )  [ RunTime:0.0386s ]
+SQL: SHOW COLUMNS FROM `weiq_cpc_taskorder` [ RunTime:0.0033s ]
+SQL: SELECT o.taskid,count(o.id) as orderrows,SUM(i.price) as total_price FROM `weiq_cpc_taskorder` as o left join weiq_cpc_orderincome as i on o.id=i.orderid  WHERE ( o.taskid in(1322,1321,1320,1319,1318,1317,1316,1315,1314,1313) ) GROUP BY o.taskid ORDER BY starttime desc  [ RunTime:0.0424s ]
+SQL: SHOW COLUMNS FROM `weiq_cpc_orderincome` [ RunTime:0.0011s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1322 ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1321 ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1320 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1319 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1318 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1317 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1316 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1315 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1314 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1313 ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2260 行.
+NOTIC: [8] Undefined variable: starttime /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2261 行.
+NOTIC: [8] Undefined variable: endtime /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2262 行.
+NOTIC: [8] Undefined variable: plat_taskid /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2263 行.
+NOTIC: [8] Undefined variable: search_type /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2264 行.
+NOTIC: [8] Undefined variable: search_taskname /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2265 行.
+NOTIC: [2] Missing argument 1 for I(), called in /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php on line 2272 and defined /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 339 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+NOTIC: [8] Undefined index: starttime /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 176 行.
+NOTIC: [8] Undefined index: endtime /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 177 行.
+NOTIC: [8] Undefined index: plat_taskid /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 180 行.
+NOTIC: [8] Undefined index: search_type /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 184 行.
+NOTIC: [8] Undefined index: search_type /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 185 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 189 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 190 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 191 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 192 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 193 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 194 行.
+NOTIC: [8] Undefined index: search_name /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 196 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2016-10-27T17:57:08+08:00 ] 127.0.0.1 /Admin/Tasksquare/task_all/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+NOTIC: [8] Undefined variable: roleinfo /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/BaseController.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `weiq_manager_user` [ RunTime:0.0036s ]
+SQL: SELECT `id`,`username`,`truename` FROM `weiq_manager_user` WHERE (  status=0 )  [ RunTime:0.0007s ]
+NOTIC: [2] Missing argument 1 for I(), called in /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php on line 2154 and defined /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `weiq_cpt_task` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2160 行.
+SQL: SELECT COUNT(*) AS tp_count FROM weiq_cpt_task t WHERE (  t.paytype=10  ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT t.id,t.taskname,t.type,t.paytype,t.plattype,t.status,t.createtime,t.managerid,cti.fee,cti.balance,GROUP_CONCAT(tc.id) as contentid FROM `weiq_cpt_task` as t LEFT JOIN weiq_cpc_taskinfo as cti ON cti.taskid = t.id left join weiq_cpc_taskcontent as tc on t.id=tc.taskid  WHERE (  t.paytype=10  ) GROUP BY t.id ORDER BY t.starttime desc LIMIT 10,10   [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `weiq_task_cpc` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `weiq_task_cpc` WHERE ( taskid in(1312,1311,1304,1310,1309,1308,1307,1306,1305,1303) )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `weiq_cpc_taskorder` [ RunTime:0.0015s ]
+SQL: SELECT o.taskid,count(o.id) as orderrows,SUM(i.price) as total_price FROM `weiq_cpc_taskorder` as o left join weiq_cpc_orderincome as i on o.id=i.orderid  WHERE ( o.taskid in(1312,1311,1304,1310,1309,1308,1307,1306,1305,1303) ) GROUP BY o.taskid ORDER BY starttime desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `weiq_cpc_orderincome` [ RunTime:0.0022s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1312 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1311 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1304 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1310 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1309 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1308 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1307 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1306 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1305 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `weiq_cpc_orderincome` WHERE ( taskid=1303 ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2260 行.
+NOTIC: [8] Undefined variable: starttime /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2261 行.
+NOTIC: [8] Undefined variable: endtime /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2262 行.
+NOTIC: [8] Undefined variable: plat_taskid /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2263 行.
+NOTIC: [8] Undefined variable: search_type /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2264 行.
+NOTIC: [8] Undefined variable: search_taskname /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php 第 2265 行.
+NOTIC: [2] Missing argument 1 for I(), called in /svr/htdocs/wechat/branches/ppe/Application/Admin/Controller/TasksquareController.class.php on line 2272 and defined /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name /svr/htdocs/wechat/branches/ppe/ThinkPHP/Common/functions.php 第 339 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined index: starttime /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 176 行.
+NOTIC: [8] Undefined index: endtime /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 177 行.
+NOTIC: [8] Undefined index: plat_taskid /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 180 行.
+NOTIC: [8] Undefined index: search_type /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 184 行.
+NOTIC: [8] Undefined index: search_type /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 185 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 189 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 190 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 191 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 192 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 193 行.
+NOTIC: [8] Undefined index: search_taskstatus /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 194 行.
+NOTIC: [8] Undefined index: search_name /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 196 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+NOTIC: [8] Undefined index: consume /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 286 行.
+NOTIC: [8] Undefined index: realclick /svr/htdocs/wechat/branches/ppe/Application/Runtime/Cache/Admin/17c5a24c239e167dce43a55115142888.php 第 288 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000648s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+

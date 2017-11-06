@@ -1,0 +1,39 @@
+body {
+	margin: 0px;
+}
+p {
+	margin: 0px;
+}
+body {
+	color: #000; background-color: #fff;
+}
+body {
+	font-size: 12px; line-height: 150%; font-family: "verdana", "arial", "helvetica", "sans-serif";
+}
+table {
+	font-size: 12px; line-height: 150%; font-family: "verdana", "arial", "helvetica", "sans-serif";
+}
+input {
+	font-size: 12px; font-family: "verdana", "arial", "helvetica", "sans-serif"; border: #d1e6f7 1px solid;
+}
+select {
+	font-size: 12px; font-family: "verdana", "arial", "helvetica", "sans-serif";
+}
+textarea {
+	font-size: 12px; font-family: "verdana", "arial", "helvetica", "sans-serif"; border: #d1e6f7 1px solid;
+}
+a:link {
+	color: #036; text-decoration: none;
+}
+a:visited {
+	color: #036; text-decoration: none;
+}
+a:hover {
+	color: #f60; text-decoration: underline;
+}
+table.tdpl td {
+	padding-left:10px;
+}
+.weizhi {
+	font-weight:bold; color:#336699; padding-left:15px;
+}

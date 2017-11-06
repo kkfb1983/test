@@ -1,0 +1,24 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: root
+ * Date: 2015/2/10
+ * Time: 17:42
+ */
+
+$a = array('a'=>array('b',1));
+$b = json_encode($a);
+echo $b;
+print_R(json_decode($b));
+
+
+session_start();
+
+echo "<pre>";
+print_R($_GET);
+
+
+
+
+
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>文章编辑页</title>
+<link href="./files/frame.css" type="text/css" rel="stylesheet">
+<link href="./files/iconfont.css" type="text/css" rel="stylesheet">
+<link href="./files/comb_editor.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+var $CONFIG = {};
+$CONFIG['js_dist'] = 'dist';
+$CONFIG['cssPath'] = 'http://img1.t.sinajs.cn';
+$CONFIG['jsPath'] = 'http://js1.t.sinajs.cn';
+$CONFIG['tt_version'] = 'f1369819ddf940ce8654ef4f66f9feea';
+$CONFIG['watermark'] = {};
+$CONFIG['wemedia'] = '0';
+$CONFIG['follow_to_read'] = '0';
+</script>
+<link href="./files/article.css" rel="stylesheet" type="text/css"><style></style>
+</head>
+<body style="cursor: auto;">
+<div class="WB_editor" node-type="page">
+  <div class="WB_editor_wrap">
+    <div class="WB_editor_main" node-type="containerBox">
+      <div class="main_wrap" id="container">
+        <div class="main_toolbar clearfix">
+          <div class="main_toolbar_inner">
+            <div class="W_fr" style="display:none;">
+              <span class="link W_f14 S_txt2" style="display:none;" node-type="draft"></span>
+              <a href="javascript:" class="btn_a" action-type="save">保存中...</a>
+              <a href="javascript:" class="btn_a" action-type="preview">预览</a>
+              <a href="javascript:" class="btn_b" action-type="publish">下一步</a>
+            </div>
+            <div class="pos" node-type="toolbar">
+              <ul class="clearfix">
+                <li class="row">
+                  <ul class="clearfix">
+                    <li class=" disable"><a href="javascript:" title="加粗" class="W_ficon ficon_bold" action-type="bold"><i></i></a></li>
+                    <li class=" disable"><a href="javascript:" title="斜体" class="W_ficon ficon_italic" action-type="italic"><i></i></a></li>
+                    <li class=" disable"><a href="javascript:" title="删除线" class="W_ficon ficon_linethrough" action-type="strikethrough"><i></i></a></li>
+                    <li class="more disable">
+                      <a href="javascript:" title="应用字色" class="ico" action-type="applyfontcolor">
+                        <i class="W_ficon ficon_color" style="border-bottom:3px solid #333333;"></i>
+                      </a>
+                      <a href="javascript:" title="选择字色" class="opt" action-type="showfontcolor"><i class="icon iconfont iconarrow">&#xe659;</i></a>
+                    </li>
+                    <li class="more2 disable"><a href="javascript:" title="选择字号" class="WB_select S_bg2 S_line1" action-type="fontsize"><span class="S_txt1">正文</span><em class="icon iconfont iconarrow ficon_arrow_down_lite icon_down">&#xe659;</em></a></li>
+                  </ul>
+                </li>
+                <li class="row">
+                  <ul class="clearfix">
+                    <li class=" disable"><a href="javascript:" title="有序列表" class="W_ficon ficon_ol" action-type="insertorderedlist"><i></i></a></li>
+                    <li class=" disable"><a href="javascript:" title="无序列表" class="W_ficon ficon_ul" action-type="insertunorderedlist"><i></i></a></li>
+                  </ul>
+              </li>
+              <li class="row">
+                <ul class="clearfix">
+                  <li class=" disable"><a href="javascript:" title="引用" class="W_ficon ficon_blockquote" action-type="blockquote"><i></i></a></li>
+                  <li class=" disable"><a href="javascript:" title="分割线" class="W_ficon ficon_line" action-type="line"><i></i></a></li>
+                </ul>
+                </li>
+                <li class="row">
+                  <ul class="clearfix">
+                    <li class=" disable"><a href="javascript:" title="插入图片" class="W_ficon ficon_image" action-type="image"><i>啊</i></a></li>
+                    <li class=" disable" style="display:none;"><a href="javascript:" class="W_ficon W_ficon ficon_video" title="插入视频" action-type="video"><i></i></a></li>
+                    <li class=" disable"><a href="javascript:" class="W_ficon W_ficon ficon_link" title="插入链接" action-type="link"><i></i></a></li>
+                    <li class=" disable" style="display:none;"><a href="javascript:" class="W_ficon ficon_commodity" action-type="product" title="插入商品"><i></i></a></li>
+                  </ul>
+                </li>
+                <li class="row" style="display:none;">
+                  <ul class="clearfix">  
+                    <li><a href="javascript:" class="W_ficon ficon_maxwin" title="全屏" action-type="fullscreen"><i></i></a></li>  
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main_box" node-type="main_box" style="height: 663px;">
+          <div class="main_toppic" style="transition: height 0.2s linear;display:none;">
+            <div class="txtbox">请添加封面图（支持5M以内的JPG、GIF、PNG图片，建议尺寸：1000*562px，信息安全区1000*400px）</div>
+            <div class="upload"><input type="file" name="pic1"></div>
+            <div class="picbox" style="display: none;"></div>
+            <div class="optbox" style="display: none;"><a href="javascript:" class="btn_c">更换<input type="file" name="pic1"></a></div>
+            <i class="W_loading_big" style="display: none;"></i>        
+          </div>
+          <div class="main_editor">
+            <div class="title" style="display:none;">
+              <input type="text" _placeholder="输入标题" class="W_input S_txt2" node-type="title">
+              <span class="tips" style="display: none;"><span node-type="titleLabel">0</span>/32</span>
+            </div>
+            <div class="author" style="display:none; position:relative; " layout-shell="true">
+              <input type="text" _placeholder="输入作者微博昵称" class="W_input S_txt2" node-type="author" autocomplete="off">
+              <span class="tips" style="display: none;"><span node-type="authorLabel">0</span>/24</span>
+            </div>
+            <div class="preface" style="display:none;">
+              <input type="text" _placeholder="导语（选填）" class="W_input S_txt2" node-type="intro">
+              <span class="tips" style="display: none;"><span node-type="introLabel">0</span>/44</span>
+            </div>
+             <div class="editor_in_v2">
+                <div id="editor" class="WB_editor_iframe placeholder" contenteditable="true" style="min-height:200px;"><p>​</p></div>
+             </div>
+            <div style="height:1px; font-size: 1px; line-height:1px; overflow:hidden; text-indent: -9999px;"><input node-type="hidden"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/ajaxfileupload.js"></script>
+<script type="text/javascript" src="./files/init.js"></script>
+<script>
+var SUDA = SUDA || [];
+SUDA.push(["setGatherInfo", null, 'WEIBO-V6']); 
+</script>
+</body>
+</html>

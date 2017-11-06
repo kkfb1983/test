@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8" />
+<head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title> Google map Demo </title>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <link rel="stylesheet" href="map.css" />
+    <script type="text/javascript" src="google_map.js"></script>
+</head>
+<body>
+<div id="map">测试文案</div>
+<script>
+	var city = '北京';
+	var itude = [{"hotel_code":"IHG-BJSES","itude":["116.528227","40.023063"],"price":"433.00","logo":"images\/brand_logo\/blue_big.jpg"},{"hotel_code":"IHG-PEGAP","itude":["116.558804","40.071487"],"price":"1198.00","logo":"images\/brand_logo\/pink_big.jpg"},{"hotel_code":"IHG-PEGFD","itude":["116.480774","39.989768"],"price":"1000.00","logo":"images\/brand_logo\/green_big.jpg"},{"hotel_code":"IHG-PEGSP","itude":["116.433126","39.97004"],"price":"1150.00","logo":"images\/brand_logo\/pink_big.jpg"},{"hotel_code":"IHG-PEGUT","itude":["116.4385","39.92211"],"price":"1200.00","logo":"images\/brand_logo\/pink_big.jpg"},{"hotel_code":"IHG-PEGWF","itude":["116.411385","39.919099"],"price":"720.00","logo":"images\/brand_logo\/pink_big.jpg"}];
+	window.onload = mapCls.loadMap('map',itude,city);
+</script>
+</body>
+</html>

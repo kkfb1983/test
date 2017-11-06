@@ -1,0 +1,11 @@
+<HTML>
+<HEAD><TITLE>Cancels Links</TITLE>
+<SCRIPT LANGUAGE="JScript">
+function cancelLink() {
+    if (window.event.srcElement.tagName == "A" && window.event.shiftKey)
+    window.event.returnValue = false;
+}
+</SCRIPT>
+<body onclick="cancelLink()">
+</body>
+</html>

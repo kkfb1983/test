@@ -1,0 +1,27 @@
+
+<div id="upload_div" style="border:1px solid green"></div>
+
+<link rel="stylesheet" href="jquery.jcuploadUI.css" />
+<script type="text/javascript" src="jquery.js"></script>
+
+<div id="id_from_some_html_element"></div>
+<script type="text/javascript" src="jquery.jcupload.js"></script>
+  <script type="text/javascript" src="jquery.jcuploadUI.config.js"></script>
+  <script type="text/javascript" src="jquery.jcuploadUI.js"></script>
+
+<script type="text/javascript">
+
+ var jcu;
+ $(document).ready(function() {
+		 var conf= {url: "upload.php",
+			 callback: {
+				 init: function() { },
+				 queue_upload_end: function() { alert( "uploaded" ); }
+			 }
+		 };
+
+		 jcu= $.jcuploadUI(conf);
+		 jcu.append_to("#upload_div");
+  });
+
+</script>

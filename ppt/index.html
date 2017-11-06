@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>分享会</title>
+<script src="./images/jquery.js"></script>
+<style>
+*{outline:none; margin:0; padding:0;}
+body{text-align:center; background-color:#000;}
+img{border:none;}
+</style>
+</head>
+<body>
+<img src='./images/01.jpg' p="1" height="760">
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('body').keydown(function(event){
+			var src = '';
+			var o = $(this).find('img');
+            switch (event.which) {
+                case 37:
+                    k = parseInt(o.attr('p')) - 1;
+                    if (k <= 1) {
+                        k = 1;
+                    }
+                    if (k < 10) {
+                        src = './images/0' + k + '.jpg';
+                    } else {
+                        src = './images/' + k + '.jpg';
+                    }
+                    break;
+                case 39:
+                    k = parseInt(o.attr('p')) + 1;
+                    if (k >= 38) {
+                        k = 38;
+                    }
+                    if (k < 10) {
+                        src = './images/0' + k + '.jpg';
+                    } else {
+                        src = './images/' + k + '.jpg';
+                    }
+                    break;
+            }
+			o.attr('src',src);
+			o.attr('p',k);
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{outline:none; margin:0; padding:0;}
+body{font:normal 12px "宋体", Arial; color:#FFF; background:url(../images/bg.jpg) no-repeat top center #FFF;}
+ol, ul{list-style:none;}
+table{border-collapse:collapse;	border-spacing:0;}
+img{border:none;}
+a{color:#7b859e; text-decoration:none;}
+/*a:visited{ color:#800080; text-decoration:none;} */
+a:hover{color:#336699; text-decoration:underline;} 
+
+
+
+#warp{width:984px; margin:0 auto;}
+
+.content{position:relative; height:1670px;}
+
+.topbtn{position:absolute; left:527px; top:67px; width:232px; height:71px;}
+.topbtn a{display:block; width:311px; height:122px; background:url(../images/btnpic.gif) no-repeat; text-indent:-99999em;}
+.topbtn a:hover{background:url(../images/btn.gif) no-repeat;}
+
+.inmyshow{position:absolute; left:750px; top:432px;}
+.inmyshow a{display:block; width:70px; height:44px; text-indent:-99999em;}
+
+.ctet{position:absolute; left:0px; top:745px; width:984px;}
+.ctet li{float:left; width:210px; padding:15px; margin-left:8px; font-size:14px; line-height:24px;}
+.ctet li.mleftno{margin-left:0px;}
+.ctet span{float:left; font-size:24px; margin-right:3px;}
+
+.cpic{position:absolute; left:0px; top:1145px; width:984px;}
+.cpic li{float:left; width:164px; margin-left:84px; display:inline;}
+.cpic li.ml38{margin-left:38px;}
+
+.clink{position:absolute; left:0px; top:1418px; width:984px;}
+.clink li{float:left; width:150px; height:76px; margin-left:17px;}
+.clink li.mleftno{margin-left:0px;}
+.clink li.ml16{margin-left:16px;}
+
+
+/*footer*/
+.footer{width:100%; clear:both; overflow:hidden; margin-top:20px; padding-bottom:20px;}
+.footer .tile{ font-size:18px; font-weight:normal; font-family:"Microsoft Yahei"; color:#0e4d73;}
+
+.contact{width:984px; overflow:hidden; margin-top:20px;}
+.contact div{float:left; width:328px; height:129px;}
+.contact div.line{background:url(../images/line.gif) repeat-y right;}
+.contact p{ padding-left:49px; padding-top:25px; font-family:"Microsoft Yahei"; font-size:14px; color:#0e4d73; line-height:2em;}
+.contact p a{color:#0e4d73;}

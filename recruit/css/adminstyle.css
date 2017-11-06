@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{outline:none; margin:0; padding:0;}
+body{font:normal 12px "宋体", Arial; color:#FFF;}
+ol, ul{list-style:none;}
+table{border-collapse:collapse;	border-spacing:0;}
+img{border:none;}
+a{color:#7b859e; text-decoration:none;}
+/*a:visited{ color:#800080; text-decoration:none;} */
+a:hover{color:#336699; text-decoration:underline;} 
+
+
+
+#warp{width:100%;}
+.inside{width:980px; margin:0 auto; position:relative;}
+.sc_01{width:100%; background:url(../images/p_t01.jpg) no-repeat top center; height:341px;}
+a.btn_right{position:absolute; width:210px; height:76px; background:url(../images/btn_out.jpg) no-repeat; top:259px; right:26px; text-indent:-99999em; display:inline-block;}
+a.btn_right:hover{background:url(../images/btn_over.jpg) no-repeat;}
+
+
+a.btn_upload{position:absolute; width:180px; height:58px; background:url(../images/upload_out.jpg) no-repeat; top:161px; right:-5px; text-indent:-99999em; display:inline-block;}
+a.btn_upload:hover{background:url(../images/upload_over.jpg) no-repeat;}
+
+
+.sc_02{width:100%; background:url(../images/p_t02.jpg) no-repeat top center; height:941px;}
+
+.sc_03{width:100%; background:url(../images/p_t03.jpg) no-repeat top center; height:228px;}
+
+.sc_04{width:100%; background:url(../images/p_t04.jpg) no-repeat top center; height:242px;}
+
+.sc_04 a{position:absolute; width:150px; height:75px; text-indent:-99999em; top:60px;}
+.sc_04 a.com_01{left:0px;}
+.sc_04 a.com_02{left:166px;}
+.sc_04 a.com_03{left:332px;}
+.sc_04 a.com_04{left:498px;}
+.sc_04 a.com_05{left:664px;}
+.sc_04 a.com_06{left:830px;}
+
+
+
+
+
+
+
+
+/*footer*/
+.footer{width:100%; clear:both; overflow:hidden; padding-bottom:20px; background-color:#2157a1;}
+.footer .tile{ font-size:18px; font-weight:normal; font-family:"Microsoft Yahei"; color:#FFF;}
+
+.contact{width:980px; overflow:hidden; margin:20px auto;}
+.contact div{float:left; width:308px; height:129px;}
+.contact div.line{background:url(../images/line.gif) repeat-y right; text-align:left;}
+.contact p.first{ padding-left:0px;}
+.contact p{ padding-right:29px; padding-left:60px; padding-top:25px; font-family:"Microsoft Yahei"; font-size:14px; color:#FFF; line-height:2em;}
+.contact p a{color:#FFF;}

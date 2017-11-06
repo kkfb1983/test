@@ -1,0 +1,147 @@
+<html>
+<head>
+<style type="text/css">
+div{
+	width: 94px;
+    height: 94px;
+}
+.aaa {
+    width: 16px;
+    height: 16px;
+    float: right;
+    position: relative;
+    background: url(./cancel.png) no-repeat;
+	border: red 1px solid;
+	top:-90%;
+}
+
+</style>
+</head>
+
+<body>
+<div>  
+              <img id="loading" src="scripts/ajaxFileUploader/loading.gif" style="display:none;">  
+             
+                  <table cellpadding="0" cellspacing="0" class="tableForm" id="calculation_model">  
+                      <thead>  
+                      <tr>  
+                          <th>多组多个文件</th>  
+                      </tr>  
+                      </thead>  
+                      <tbody>  
+                      <tr>  
+                          <td>第一组</td>  
+                      </tr>  
+                      <tr>  
+                          <td><input type="file"  name="gridDoc" class="input" multiple="file"></td>  
+                      </tr>  
+                      </tbody>  
+                      <tfoot>  
+                      <tr>  
+                          <td><button class="button" id="up1">Upload</button></td>  
+                      </tr>  
+                      </tfoot>  
+                  </table>  
+          </div>  
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/ajaxfileupload.js"></script>
+<script>
+/** 
+ * Created with IntelliJ IDEA. 
+ * User: Administrator 
+ * Date: 13-7-3 
+ * Time: 上午9:20 
+ * To change this template use File | Settings | File Templates. 
+ */  
+$(document).ready(function () {  
+    $("#up1").click(function(){  
+        // var temp = ["gridDoc","caseDoc"];  
+        // ajaxFileUpload(temp);  
+        $.ajaxFileUpload({  
+            url:'./upload.php',  
+            //secureuri:false,  
+            fileElementId:['gridDoc'],  
+            dataType: 'json',
+            success : function(data) {  
+    		}  
+        }  
+    )  
+    });  
+  
+    $("#addInput").click(function(){  
+        addInputFile();  
+    });  
+  
+});  
+  
+//动态添加一组文件  
+function addInputFile(){  
+    $("#calculation_model").append(" <tr>"+  
+        "<td><input type='file'  name='gridDoc' class='input'></td>   "+  
+        "<td><input type='file' name='caseDoc' class='input'></td> "+  
+        "</tr>");  
+}  
+  
+  
+//直接使用下载下来的文件里的demo代码  
+function ajaxFileUpload(id)  
+{  
+    //starting setting some animation when the ajax starts and completes  
+    $("#loading").ajaxStart(function(){  
+            $(this).show();  
+        }).ajaxComplete(function(){  
+            $(this).hide();  
+        });  
+  
+    /* 
+     prepareing ajax file upload 
+     url: the url of script file handling the uploaded files 
+     fileElementId: the file type of input element id and it will be the index of  $_FILES Array() 
+     dataType: it support json, xml 
+     secureuri:use secure protocol 
+     success: call back function when the ajax complete 
+     error: callback function when the ajax failed 
+ 
+     */  
+    $.ajaxFileUpload({  
+            url:'./upload.php',  
+            //secureuri:false,  
+            fileElementId:id,  
+            dataType: 'json',
+            success : function(data) {  
+    		}  
+        }  
+    )  
+  
+    return false;  
+  
+} 
+
+function ajaxFileUpload() {
+        // 开始上传文件时显示一个图片
+        $("#wait_loading").ajaxStart(function() {
+            $(this).show();
+        // 文件上传完成将图片隐藏起来
+        }).ajaxComplete(function() {
+            $(this).hide();
+        });
+        var elementIds=["flag"]; //flag为id、name属性名
+        $.ajaxFileUpload({
+            url: 'uploadAjax.htm', 
+            type: 'post',
+            secureuri: false, //一般设置为false
+            fileElementId: 'file', // 上传文件的id、name属性名
+            dataType: 'text', //返回值类型，一般设置为json、application/json
+            elementIds: elementIds, //传递参数到服务器
+            success: function(data, status){  
+                alert(data);
+            },
+            error: function(data, status, e){ 
+                alert(e);
+            }
+        });
+        //return false;
+    } 
+</script>
+</html>

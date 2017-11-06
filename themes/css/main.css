@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+body {margin:0; padding:0;}
+li {list-style-type:none;}
+.main { width:100%; height:auto;}
+.header {min-height:45px; background-color:#438eb9;color:#fff;}
+.header .icon-left { font-size: 85%; margin:12px; line-height:26px; background-color:red;}
+
+

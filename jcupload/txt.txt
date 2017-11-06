@@ -1,0 +1,287 @@
+Array
+(
+    [Filedata] => Array
+        (
+            [name] => IMAG0088.JPG
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php8E.tmp
+            [error] => 0
+            [size] => 799160
+        )
+
+)
+
+---2010-06-14 13:35:40Array
+(
+    [Filedata] => Array
+        (
+            [name] => IMAG0129.JPG
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php8F.tmp
+            [error] => 0
+            [size] => 106814
+        )
+
+)
+
+---2010-06-14 13:35:40Array
+(
+    [Filedata] => Array
+        (
+            [name] => me_smile.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php90.tmp
+            [error] => 0
+            [size] => 43798
+        )
+
+)
+
+---2010-06-14 13:35:40Array
+(
+    [Filedata] => Array
+        (
+            [name] => photo.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php91.tmp
+            [error] => 0
+            [size] => 12383
+        )
+
+)
+
+---2010-06-14 13:35:40Array
+(
+    [Filedata] => Array
+        (
+            [name] => photoEx.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php92.tmp
+            [error] => 0
+            [size] => 4567
+        )
+
+)
+
+---2010-06-14 13:35:41Array
+(
+    [Filedata] => Array
+        (
+            [name] => me_smile.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php94.tmp
+            [error] => 0
+            [size] => 43798
+        )
+
+)
+
+---2010-06-14 13:36:34Array
+(
+    [Filedata] => Array
+        (
+            [name] => photo.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php95.tmp
+            [error] => 0
+            [size] => 12383
+        )
+
+)
+
+---2010-06-14 13:36:34Array
+(
+    [Filedata] => Array
+        (
+            [name] => photoEx.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php96.tmp
+            [error] => 0
+            [size] => 4567
+        )
+
+)
+
+---2010-06-14 13:36:34Array
+(
+    [Filedata] => Array
+        (
+            [name] => me_smile.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php98.tmp
+            [error] => 0
+            [size] => 43798
+        )
+
+)
+
+---2010-06-14 13:39:23Array
+(
+    [Filedata] => Array
+        (
+            [name] => photo.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php99.tmp
+            [error] => 0
+            [size] => 12383
+        )
+
+)
+
+---2010-06-14 13:39:24Array
+(
+    [Filedata] => Array
+        (
+            [name] => photoEx.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php9A.tmp
+            [error] => 0
+            [size] => 4567
+        )
+
+)
+
+---2010-06-14 13:39:24Array
+(
+    [Filedata] => Array
+        (
+            [name] => me_smile.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php9C.tmp
+            [error] => 0
+            [size] => 43798
+        )
+
+)
+
+---2010-06-14 13:39:57Array
+(
+    [Filedata] => Array
+        (
+            [name] => photo.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php9D.tmp
+            [error] => 0
+            [size] => 12383
+        )
+
+)
+
+---2010-06-14 13:39:57Array
+(
+    [Filedata] => Array
+        (
+            [name] => photoEx.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\php9E.tmp
+            [error] => 0
+            [size] => 4567
+        )
+
+)
+
+---2010-06-14 13:39:58Array
+(
+    [Filedata] => Array
+        (
+            [name] => IMAG0129.JPG
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\phpA2.tmp
+            [error] => 0
+            [size] => 106814
+        )
+
+)
+
+---2010-06-14 13:47:42Array
+(
+    [Filedata] => Array
+        (
+            [name] => me_smile.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\phpA3.tmp
+            [error] => 0
+            [size] => 43798
+        )
+
+)
+
+---2010-06-14 13:47:42Array
+(
+    [Filedata] => Array
+        (
+            [name] => photo.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\phpA4.tmp
+            [error] => 0
+            [size] => 12383
+        )
+
+)
+
+---2010-06-14 13:47:42Array
+(
+    [Filedata] => Array
+        (
+            [name] => photoEx.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\WINDOWS\Temp\phpA5.tmp
+            [error] => 0
+            [size] => 4567
+        )
+
+)
+
+---2010-06-14 13:47:42Array
+(
+    [Filedata] => Array
+        (
+            [name] => 17-13121G53053.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\xampp\tmp\phpA394.tmp
+            [error] => 0
+            [size] => 68298
+        )
+
+)
+
+---2014-03-01 10:46:53Array
+(
+    [Filedata] => Array
+        (
+            [name] => 58ee3d6d55fbb2fbf58b13434d4a20a44623dc3b.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\xampp\tmp\phpA431.tmp
+            [error] => 0
+            [size] => 682236
+        )
+
+)
+
+---2014-03-01 10:46:53Array
+(
+    [Filedata] => Array
+        (
+            [name] => 032933tihwe44pob8hpvwx.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\xampp\tmp\phpA4CE.tmp
+            [error] => 0
+            [size] => 280221
+        )
+
+)
+
+---2014-03-01 10:46:53Array
+(
+    [Filedata] => Array
+        (
+            [name] => 1373597503074.jpg
+            [type] => application/octet-stream
+            [tmp_name] => C:\xampp\tmp\phpA57A.tmp
+            [error] => 0
+            [size] => 209964
+        )
+
+)
+
+---2014-03-01 10:46:54

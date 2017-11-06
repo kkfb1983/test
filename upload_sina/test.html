@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+<script src='../js/jquery.js'></script>
+	
+	
+<input type='file' name='pic' id='pic'>
+	
+<a href='javascript:;' onclick='uploadSina.main();'>开始上传</a>
+
+
+<script>
+var uploadSina = {};
+	uploadSina = function(){
+		return {
+			main : function(){
+				this.createIfream();
+				this.createForm().submit();
+				var timeInt = setInterval(function(){
+					var reg = /^\d+$/;
+					var src = uploadSina.getImageUrl();
+					if(src.length > 0 && !reg.test(src)){
+//						alert(src);
+						callback(src);
+						clearInterval(timeInt);
+					}
+				},1000);
+			},
+			createForm : function(){
+				var f		= document.createElement("form");
+				f.id = 'upload_sina_form';
+				f.action	= 'upload.php';
+	            f.method	= "post";
+				f.target	= "upload_sina";
+	            f.enctype	= "multipart/form-data";
+				f.style	= "display: none;";
+				$('#pic').appendTo(document.body.appendChild(f));
+				return f;
+			},
+			createIfream : function(){
+				var i	= document.createElement("iframe");
+				i.id	= "upload_sina_iframe";
+				i.name	= "upload_sina";
+	            i.style.display	= "none";
+				document.body.appendChild(i);
+			},
+			getImageUrl : function (){
+				var imgUrl = $("#upload_sina_iframe").contents().find("body").html();
+		        return imgUrl;
+		    }
+		}
+	}()
+	
+function callback(file){
+	alert(file);
+}
+    
+</script>
+
+</body>
+</html>

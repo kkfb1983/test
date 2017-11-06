@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id="canvas" style="width:100%;height:100%;background-color: #8b9aa4">
+    默任值
+</canvas>
+<script>
+
+    var demo = {};
+    var Person = function (){
+        this.name='kkfb';
+        this.age = 30;
+        callback = function(){
+            return this.name;
+        }
+    }
+    demo = function(){
+        this.base = new Person(name);
+        for(var key in this.base){
+            if(!this[key]){
+                this[key]=this.base[key];
+            }
+        }
+        var sex = 0;
+        return {
+            main : function(){
+                return callback();
+            }
+        }
+    }()
+
+    alert(demo.callback());
+
+//    var test = function (){
+//        this.name='kkfb';
+//        this.age = 30;
+//        callback = function(){
+//            alert(this.name);
+//        }
+//    }
+//    test.prototype.getName = function() {
+//        return this.name;
+//    }
+//
+//    var demo = {};
+//    demo = function(){
+//        var sex = 0;
+//        return {
+//            main : function(){
+//                return this.age;
+//            }
+//        }
+//    }()
+//
+//    test.prototype = demo;
+//
+//    var o = new test();
+//    alert(o.main());
+
+/**
+function Person(name) {
+    this.name = name;
+}
+Person.prototype.getName = function() {
+    return this.name;
+}
+function Author(name, books) {
+    this.base = new Person(name);
+    for(var key in this.base){
+        if(!this[key]){
+            this[key]=this.base[key];
+        }
+    }
+    this.book=books;
+}
+var au1=new Author("dororo1","work");
+alert(au1.getName());
+
+**/
+</script>
+</body>
+</html>

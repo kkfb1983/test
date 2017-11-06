@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src='../js/jquery.js'></script>
+	<div>
+	<input type='file' name='pic' id="pic1">
+	<a id="fb" href='javascript:;' onclick='uploadSina.main(this,"ifream_id","/upload_sina/upload.php");'>开始上传</a>
+	</div>
+	
+	<div>
+	<input type='file' name='pic' id="pic2">
+	<a id="fb" href='javascript:;' onclick='uploadSina.main(this,"ifream_id","http://hotelapi/upload.php");'>开始上传</a>
+	</div>
+
+<script>
+	var uploadSina = {};
+	uploadSina = function(){
+		var _obj;
+		var _url;
+		var _form;
+		var _ifreame;
+		return {
+			main : function(o,ifr,url){
+				_obj = o;
+				_url = url;
+				_ifreame = ifr;
+				_form = "upload_form_sina";
+				var ifObj = this.createIfream();
+				this.createForm().submit();
+				var timeInt = setInterval(function(){
+					var reg = /^\d+$/;
+					var src = uploadSina.getImageUrl();
+					if(src.length > 0 && !reg.test(src)){
+						callback(src);
+						clearInterval(timeInt);
+						$('#'+_form).last().remove();
+						$('#'+_ifreame+'_sina').remove();
+					}
+				},1000);
+			},
+			createForm : function(){
+				if($.browser.msie){  
+			        var f = document.createElement('<form id="'+_form+'" name="'+_form+'" action="'+_url+'" method="post" target="'+_ifreame+'" enctype="multipart/form-data"></form>');
+			    }else{  
+			       var f		= document.createElement("form");
+					f.id		= _form;
+					f.action	= _url;
+		            f.method	= "post";
+					f.target	= _ifreame;
+		            f.enctype	= "multipart/form-data";
+					f.style.display	= "none";
+			    }  
+				var html = $($(_obj).parent()).html();
+				$($(_obj).parent()).find(':file').eq(0).appendTo(document.body.appendChild(f));
+				$($(_obj).parent()).html(html)
+				return f;
+			},
+			createIfream : function(){
+				if ($.browser.msie) {
+					var i = document.createElement('<iframe id="'+_ifreame+'_sina" name="'+_ifreame+'"></iframe>');
+				}else{
+					var i	= document.createElement("iframe");
+					i.id	= _ifreame+'_sina';
+					i.name	= _ifreame;
+		            i.style.display	= "none";
+				}
+				document.body.appendChild(i);
+			},
+			getImageUrl : function (){
+				var imgUrl = $("#"+_ifreame+'_sina').contents().find("body").html();
+		        return imgUrl;
+		    }
+		}
+	}()
+	
+	
+function callback(file){
+	alert(file);
+}
+	
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+    document.getElementsByTagName_r('body')[0].addEventListener('touchstart', function(e){
+        nStartY = e.targetTouches[0].pageY;
+		alert(nStartY);
+        nStartX = e.targetTouches[0].pageX;
+    });
+    document.getElementsByTagName_r('body')[0].addEventListener('touchend', function(e){
+        nChangY = e.changedTouches[0].pageY;
+        nChangX = e.changedTouches[0].pageX;
+    });
+</script>
+</body>
+</html>

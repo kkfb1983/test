@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{1863889A-00DF-4350-BA39-669CA949CB81}") = "test", "test\test.phpproj", "{C8E99A3C-7291-43F9-99B9-9486324FFF06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|PHP 5.6 = Local|PHP 5.6
+		Production|PHP 5.6 = Production|PHP 5.6
+		Staging|PHP 5.6 = Staging|PHP 5.6
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8E99A3C-7291-43F9-99B9-9486324FFF06}.Local|PHP 5.6.ActiveCfg = Local|PHP 5.6
+		{C8E99A3C-7291-43F9-99B9-9486324FFF06}.Local|PHP 5.6.Deploy.0 = Local|PHP 5.6
+		{C8E99A3C-7291-43F9-99B9-9486324FFF06}.Production|PHP 5.6.ActiveCfg = Production|PHP 5.6
+		{C8E99A3C-7291-43F9-99B9-9486324FFF06}.Production|PHP 5.6.Deploy.0 = Production|PHP 5.6
+		{C8E99A3C-7291-43F9-99B9-9486324FFF06}.Staging|PHP 5.6.ActiveCfg = Staging|PHP 5.6
+		{C8E99A3C-7291-43F9-99B9-9486324FFF06}.Staging|PHP 5.6.Deploy.0 = Staging|PHP 5.6
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

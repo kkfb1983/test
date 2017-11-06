@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>计算JAVASCRIPT中字符串的长度
+	
+<script>
+
+function len(s){
+    var l = 0;
+    var a = s.split("");
+    for (var i = 0; i < a.length; i++) {
+        if (a[i].charCodeAt(0) < 299) {
+            l++;
+        }
+        else {
+            l += 3;
+        }
+    }
+    return l;
+}
+
+
+ function checkLen(date)
+{
+	var len = date.replace( /[^x00-xff]/g,"xxx" ).length;
+	return len;
+}
+
+
+alert(checkLen('1中'));
+</script>
+</body>
+</html>

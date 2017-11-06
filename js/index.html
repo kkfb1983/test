@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src='jquery.js'></script>
+<script src='layer.js'></script>
+</head>
+<body>
+<div id="abc" style='width:200px; height:200px; background:red; display:none;'></div>
+<script>
+function show(){
+    $.layerSetup({
+        id: "abc",//弹出层的ID 
+        title: "test",//标题 
+        content: 'test',//内容 
+        isbg: false,//是否显示背景遮照层 
+        opacity: 0.3,//背景遮照层的透明度，值越大透明度越低，0为完全透明，1为不透明 
+        templete: '<div class="showwint_mini_title"><span class="showwint_mini_close_btn"><a href="javascript:void(null);" class="layerclose"></a></span><span class="showwint_mini_title_content" id="@moveid@"><span id="@titleid@"></span></span></div><div class="showwint_mini_content"><div class="showwint_mini_content_content" id="@contentid@"></div></div>' //模板 
+    });
+    $.layershow();
+}
+show();
+</script>
+</body>
+</html>
