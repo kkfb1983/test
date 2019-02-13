@@ -5,13 +5,12 @@ session_start();
 include_once( './interface/sina/config.php' );
 include_once( './interface/sina/saetv2.ex.class.php' );
 
-$arr = ['a'=>1,'b'=>2,'c'=>3];
-$data = object $arr;
-var_dump($data)
+
+
+phpinfo();
+
 exit;
-$number = -1234.5672;
-echo sprintf("%.2f",$number);
-exit;
+
 
 echo "<pre>";
 $str = '{"callid":"6359f974211de114","ringingtime":"2017-11-01 15:13:43","recordUrl":"","releasecause":"16","starttime":"2017-11-01 15:13:48","telX":"13008166423","calltime":"2017-11-01 15:13:37","telA":"13436956064","subid":"A1183X28X0088359418-00-1-XZYX-GXI","telB":"18810871230","releasetime":"2017-11-01 15:13:48","releasedir":"1","requestId":"450583130","callrecording":"1","calltype":"128","recordMode":"1","uxin":"\"{\\\"u\\\":2705,\\\"c\\\":10822,\\\"s\\\":902,\\\"a\\\":\\\"A1183X28X0088359418-00-1-XZYX-GXI\\\",\\\"t\\\":1}\""}';
