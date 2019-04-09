@@ -5,6 +5,25 @@ header("Content-Type:text/html;charset=utf-8");
 
 ##################################################################################
 echo "<pre>";
+// /data/board/getcaptainlist?sales_type=2&region_name=%E5%85%A8%E9%83%A8&group_name=%E5%85%A8%E9%83%A8&master_name=%E5%85%A8%E9%83%A8&dimension=5&select_time=&partition_id=&region_id=&group_id=&task_type=&partition_name=\xC8\xAB\xB2\xBF&page=1&limit=10
+
+$m = '\xC8\xAB\xB2\xBF';
+// echo mb_convert_encoding('\xC8\xAB\xB2\xBF', "utf-8");
+// echo base_convert(bin2hex(iconv('UTF-8',"UCS-4",$m)),16,10);
+
+
+$name = str_replace("\\\\u","\u",$m);
+    $json = '{"str":"'.$name.'"}';
+    $arr = json_decode($json,true);
+    var_dump($arr['str']);
+
+
+exit;
+
+$get = $_GET;
+echo "<pre>";
+var_dump($get);
+exit;
 
 
 $str = 'ef3d16ab42580aa5778062ded8c58eacappkeyXZYX_0001callid6359f6e3f00c9e14callrecording1calltime2017-10-30 16:33:52calltype1releasecause16releasedir1releasetime2017-10-30 16:34:03requestId435409867ringingtime2017-10-30 16:33:57starttime2017-10-30 16:34:03subidA1183X755X0084011118-00-1-XZYX-GXItelA18301662441telB18511400917telX13049801029ts20171030163404284700003';
