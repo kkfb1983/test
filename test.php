@@ -7,7 +7,141 @@ include_once( './interface/sina/saetv2.ex.class.php' );
 
 
 
-phpinfo();
+
+
+$a1=array("a"=>"","b"=>"green","c"=>"blue");
+$a2=array("a"=>"red2","c"=>"blue","d"=>"pink");
+
+$result=array_intersect_key($a1,$a2);
+print_r($result);
+
+
+
+exit;
+
+$n = "24linux"+6;
+echo $n;
+exit;
+
+
+$api_json = [                //类型：Array  必有字段  备注：返回数据
+    [                //类型：Object  必有字段  备注：网点信息
+        "site_id"=>516,                //类型：Number  必有字段  备注：网点id
+        "site_name"=>"滦平测试网点",                //类型：String  必有字段  备注：网点名称
+        "inspire_end_time"=>1560418762,                //类型：Number  必有字段  备注：反佣优惠截止日期
+        "investor"=>[                //类型：Object  必有字段  备注：投资人
+            "master_id"=>0,                //类型：Number  必有字段  备注：投资人id
+            "role"=>1,                //类型：Number  必有字段  备注：角色：1投资人，2网点负责人，3推广员
+            "commission_ratio"=>"0.0",                //类型：String  必有字段  备注：佣金比例
+            "bank_account_name"=>"mock",                //类型：String  必有字段  备注：开户人
+            "bank_branch_name"=>"mock",                //类型：String  必有字段  备注：开户行
+            "bank_account_number"=>"mock"                //类型：String  必有字段  备注：收款帐号
+        ],
+        "leader"=>[                //类型：Object  必有字段  备注：网点负责人
+            "master_id"=>25,                //类型：Number  必有字段  备注：网点负责人id
+            "role"=>2,                //类型：Number  必有字段  备注：角色：1投资人，2网点负责人，3推广员
+            "commission_ratio"=>"100.0",                //类型：String  必有字段  备注：佣金比例
+            "bank_account_name"=>"mock",                //类型：String  必有字段  备注：开户人
+            "bank_branch_name"=>"mock",                //类型：String  必有字段  备注：开户行
+            "bank_account_number"=>"mock"                //类型：String  必有字段  备注：收款帐号
+        ],
+        "promoters"=>[                //类型：Array  必有字段  备注：推广员
+            [                //类型：Object  必有字段  备注：无
+                "master_id"=>27,                //类型：Number  必有字段  备注：推广员id
+                "role"=>3,                //类型：Number  必有字段  备注：角色：1投资人，2网点负责人，3推广员
+                "commission_ratio"=>"0.0",                //类型：String  必有字段  备注：佣金比例
+                "bank_account_name"=>"yaoxin5",                //类型：String  必有字段  备注：开户人
+                "bank_branch_name"=>"中国银行股份有限公司珠海夏湾支行",                //类型：String  必有字段  备注：开户行
+                "bank_account_number"=>"6225880189880002"                //类型：String  必有字段  备注：收款帐号
+            ],
+            [                //类型：Object  必有字段  备注：无
+                "master_id"=>473,                //类型：Number  必有字段  备注：无
+                "role"=>3,                //类型：Number  必有字段  备注：无
+                "commission_ratio"=>"0.0",                //类型：String  必有字段  备注：无
+                "bank_account_name"=>"mock",                //类型：String  必有字段  备注：无
+                "bank_branch_name"=>"mock",                //类型：String  必有字段  备注：无
+                "bank_account_number"=>"mock"                //类型：String  必有字段  备注：无
+            ]
+        ]
+    ],
+    [                //类型：Object  必有字段  备注：无
+        "site_id"=>41,                //类型：Number  必有字段  备注：无
+        "site_name"=>"北京市朝阳区东亚望京中心店",                //类型：String  必有字段  备注：无
+        "inspire_end_time"=>-62170012800,                //类型：Number  必有字段  备注：无
+        "investor"=>[                //类型：Object  必有字段  备注：无
+            "master_id"=>0,                //类型：Number  必有字段  备注：无
+            "role"=>1,                //类型：Number  必有字段  备注：无
+            "commission_ratio"=>"0.0",                //类型：String  必有字段  备注：无
+            "bank_account_name"=>"mock",                //类型：String  必有字段  备注：无
+            "bank_branch_name"=>"mock",                //类型：String  必有字段  备注：无
+            "bank_account_number"=>"mock"                //类型：String  必有字段  备注：无
+        ],
+        "leader"=>[                //类型：Object  必有字段  备注：无
+            "master_id"=>27,                //类型：Number  必有字段  备注：无
+            "role"=>2,                //类型：Number  必有字段  备注：无
+            "commission_ratio"=>"100.0",                //类型：String  必有字段  备注：无
+            "bank_account_name"=>"yaoxin5",                //类型：String  必有字段  备注：无
+            "bank_branch_name"=>"中国银行股份有限公司珠海夏湾支行",                //类型：String  必有字段  备注：无
+            "bank_account_number"=>"6225880189880002"                //类型：String  必有字段  备注：无
+        ],
+        "promoters"=>[                //类型：Array  必有字段  备注：无
+        ]
+    ],
+    [                //类型：Object  必有字段  备注：无
+        "site_id"=>523,                //类型：Number  必有字段  备注：无
+        "site_name"=>"X3发券测试",                //类型：String  必有字段  备注：无
+        "inspire_end_time"=>1560355200,                //类型：Number  必有字段  备注：无
+        "investor"=>[                //类型：Object  必有字段  备注：无
+            "master_id"=>27,                //类型：Number  必有字段  备注：无
+            "role"=>1,                //类型：Number  必有字段  备注：无
+            "commission_ratio"=>"0.0",                //类型：String  必有字段  备注：无
+            "bank_account_name"=>"yaoxin5",                //类型：String  必有字段  备注：无
+            "bank_branch_name"=>"中国银行股份有限公司珠海夏湾支行",                //类型：String  必有字段  备注：无
+            "bank_account_number"=>"6225880189880002"                //类型：String  必有字段  备注：无
+        ],
+        "leader"=>[                //类型：Object  必有字段  备注：无
+            "master_id"=>11,                //类型：Number  必有字段  备注：无
+            "role"=>2,                //类型：Number  必有字段  备注：无
+            "commission_ratio"=>"100.0",                //类型：String  必有字段  备注：无
+            "bank_account_name"=>"mock",                //类型：String  必有字段  备注：无
+            "bank_branch_name"=>"mock",                //类型：String  必有字段  备注：无
+            "bank_account_number"=>"mock"                //类型：String  必有字段  备注：无
+        ],
+        "promoters"=>[                //类型：Array  必有字段  备注：无
+        ]
+    ],
+    [                //类型：Object  必有字段  备注：无
+        "site_id"=>524,                //类型：Number  必有字段  备注：无
+        "site_name"=>"X3测试网点",                //类型：String  必有字段  备注：无
+        "inspire_end_time"=>1560441600,                //类型：Number  必有字段  备注：无
+        "investor"=>[                //类型：Object  必有字段  备注：无
+            "master_id"=>0,                //类型：Number  必有字段  备注：无
+            "role"=>1,                //类型：Number  必有字段  备注：无
+            "commission_ratio"=>"0.0",                //类型：String  必有字段  备注：无
+            "bank_account_name"=>"mock",                //类型：String  必有字段  备注：无
+            "bank_branch_name"=>"mock",                //类型：String  必有字段  备注：无
+            "bank_account_number"=>"mock"                //类型：String  必有字段  备注：无
+        ],
+        "leader"=>[                //类型：Object  必有字段  备注：无
+            "master_id"=>27,                //类型：Number  必有字段  备注：无
+            "role"=>2,                //类型：Number  必有字段  备注：无
+            "commission_ratio"=>"100.0",                //类型：String  必有字段  备注：无
+            "bank_account_name"=>"yaoxin5",                //类型：String  必有字段  备注：无
+            "bank_branch_name"=>"中国银行股份有限公司珠海夏湾支行",                //类型：String  必有字段  备注：无
+            "bank_account_number"=>"6225880189880002"                //类型：String  必有字段  备注：无
+        ],
+        "promoters"=>[                //类型：Array  必有字段  备注：无
+        ]
+    ]
+];
+echo "<pre>";
+print_r($api_json);
+
+
+
+exit;
+$d = '2019-06-05';
+echo date('Y-m-d',strtotime('-4 day '.$d));
 
 exit;
 

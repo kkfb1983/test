@@ -5,7 +5,52 @@ header("Content-Type:text/html;charset=utf-8");
 
 ##################################################################################
 echo "<pre>";
-// /data/board/getcaptainlist?sales_type=2&region_name=%E5%85%A8%E9%83%A8&group_name=%E5%85%A8%E9%83%A8&master_name=%E5%85%A8%E9%83%A8&dimension=5&select_time=&partition_id=&region_id=&group_id=&task_type=&partition_name=\xC8\xAB\xB2\xBF&page=1&limit=10
+
+$p = ['a'=>1,'b'=>2];
+function f(&$p){
+    $s = 3;
+    return $s;
+}
+$data = f($p);
+print_r($data);
+exit;
+
+phpinfo();
+
+exit;
+
+class c0826 {
+    private $_n = 0;
+    public function fun1(){
+        $this->_n++;
+        // return $this;
+    }
+    public function fun2(){
+        $this->_n++;
+        return $this->_n;
+    }
+    public function fun3(){
+        return $this->fun1()->fun2();
+    }
+}
+$o = new c0826();
+echo $o->fun3();
+exit;
+
+$time = strtotime('-4 day');
+        $_date = [
+            'start' => date('Y-m-d',$time).' 01:00:00',
+            'end' => date('Y-m-d',$time). ' 23:59:59'
+        ];
+        print_r($_date);
+        exit;
+$ncData['leader']['commission_ratio'] = 0;
+echo $ncData['leader']['commission_ratio'] / 100;
+
+exit;
+
+echo md5(503605);
+exit;
 
 $m = '\xC8\xAB\xB2\xBF';
 // echo mb_convert_encoding('\xC8\xAB\xB2\xBF', "utf-8");
