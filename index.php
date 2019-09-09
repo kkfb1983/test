@@ -6,6 +6,11 @@ header("Content-Type:text/html;charset=utf-8");
 ##################################################################################
 echo "<pre>";
 
+echo date('Y-m-d H:i:s',strtotime('30 day'));
+exit;
+echo strtotime(date('Y-m-d ')."24:00:00");
+exit;
+
 $p = ['a'=>1,'b'=>2];
 function f(&$p){
     $s = 3;
