@@ -14,9 +14,9 @@ $node = array(
 //$time 表示A链表
 //这里为了节约资源，没开第三条链表，而是在B链表中操作,为什么要选一条不确定长度的链表
 //看完你就知道为什么了
+$data = array();
 if(empty($data)) {
-        //申请节点
-    $data = array();
+    //申请节点
     foreach($time as $value)
     {
           //将A链表的数据进行需求处理，组成我们需要的节点模式
