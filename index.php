@@ -6,6 +6,16 @@ header("Content-Type:text/html;charset=utf-8");
 ##################################################################################
 echo "<pre>";
 
+
+$time = strtotime('-4 day');
+        $_date = [
+            'start' => date('Y-m-d',$time).' 00:00:00',
+            'end' => date('Y-m-d',$time). ' 23:59:59'
+        ];
+print_r($_date);
+
+    exit;
+
 echo date('Y-m-d H:i:s',strtotime('30 day'));
 exit;
 echo strtotime(date('Y-m-d ')."24:00:00");
