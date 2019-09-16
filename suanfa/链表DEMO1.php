@@ -15,6 +15,7 @@ $node = array(
 //这里为了节约资源，没开第三条链表，而是在B链表中操作,为什么要选一条不确定长度的链表
 //看完你就知道为什么了
 $data = array();
+$time = array();
 if(empty($data)) {
     //申请节点
     foreach($time as $value)
