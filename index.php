@@ -6,6 +6,20 @@ header("Content-Type:text/html;charset=utf-8");
 ##################################################################################
 echo "<pre>";
 
+$param920 = 2;
+echo empty($param920) ?? 1;
+exit;
+
+
+$where['renew_status'] = 0;
+if(!empty($where['renew_status']) || isset($where['renew_status'])){
+    if(is_array($where['renew_status'])){
+        echo 1;
+    }else{
+        echo 2;
+    }
+}
+exit;
 
 $time = strtotime('-4 day');
         $_date = [
