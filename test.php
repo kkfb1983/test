@@ -2,12 +2,16 @@
 date_default_timezone_set("Asia/Shanghai");
 header("Content-Type:text/html;charset=utf-8");
 session_start();
-include_once( './interface/sina/config.php' );
-include_once( './interface/sina/saetv2.ex.class.php' );
+// include_once( './interface/sina/config.php' );
+// include_once( './interface/sina/saetv2.ex.class.php' );
 
-
-
-
+$time = strtotime('-4 day');
+        $_date = [
+            'start' => date('Y-m-d',$time).' 00:00:00',
+            'end' => date('Y-m-d',$time). ' 23:59:59'
+        ];
+print_r($_date);
+exit;
 
 $a1=array("a"=>"","b"=>"green","c"=>"blue");
 $a2=array("a"=>"red2","c"=>"blue","d"=>"pink");

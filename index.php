@@ -6,6 +6,33 @@ header("Content-Type:text/html;charset=utf-8");
 ##################################################################################
 echo "<pre>";
 
+
+$max = 9;
+for($i=0;$i<$max;$i++){
+
+}
+
+
+exit;
+
+$a = [1=>'a',2=>'b'];
+unset($a[1]);
+var_dump($a);
+exit;
+
+echo date('Y-m-d H:i:s',strtotime(''));
+exit;
+
+
+$time = strtotime('-4 day');
+        $_date = [
+            'start' => date('Y-m-d',$time).' 00:00:00',
+            'end' => date('Y-m-d',$time). ' 23:59:59'
+        ];
+
+        print_r($_date);
+        exit;
+
 $param920 = 2;
 echo empty($param920) ?? 1;
 exit;
