@@ -5,13 +5,65 @@ session_start();
 // include_once( './interface/sina/config.php' );
 // include_once( './interface/sina/saetv2.ex.class.php' );
 
-$time = strtotime('-4 day');
-        $_date = [
-            'start' => date('Y-m-d',$time).' 00:00:00',
-            'end' => date('Y-m-d',$time). ' 23:59:59'
-        ];
-print_r($_date);
+function ttt($n){
+    $s = [];
+    $sum = 0;
+    $ln = 0;
+    $rn = 0;
+    $fa = 0;
+    $f = "";
+    for($i=1;$i<$n;$i++){
+        if ($i > 1) {
+            $r = $l;
+        }
+        $l = $i*$i;
+        if ($i == 1){
+            $f = "-";
+            $sum += $l;
+        }else{
+            $f = $i % 2 == 0 ? "-" : "+";
+            if ($i % 2 == 0){
+                $sum += $l+$r;
+            }else{
+                $sum += $l-$r;
+            }
+        }
+        $s[] = "($i*$i) $f";
+        
+        
+        
+    }
+    echo implode($s,"*")."=".$sum;
+    return $sum;
+}
+
+$m = 5;
+ttt($m);
+
 exit;
+
+// $content = file_get_contents('php://input');
+$content = date("Y-m-d H:i:s").PHP_EOL;
+$json_data .= file_get_contents('php://input');
+// $content .= json_decode($_POST,TURE).PHP_EOL;
+file_put_contents("/var/tmp/test".date("Ymd").".log",json_decode($json_data,true));
+echo json_encode(['code'=>1,"msg"=>"ok","data"=>[]]);
+
+
+
+exit; 
+class aa{
+    public function fun1(){
+        return [1,2];
+    }
+    public function fun2(){
+        return [3,4];
+    }
+}
+$a = new aa();
+print_r($a->fun1()->fun2());
+exit;
+
 
 $a1=array("a"=>"","b"=>"green","c"=>"blue");
 $a2=array("a"=>"red2","c"=>"blue","d"=>"pink");

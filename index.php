@@ -5,7 +5,246 @@ header("Content-Type:text/html;charset=utf-8");
 
 ##################################################################################
 echo "<pre>";
+echo "1".PHP_EOL;
+go(function (){
+    Co::sleep(2);
+    echo "2".PHP_EOL;
+});
+go(function (){
+    Co::sleep(1);
+    echo "3".PHP_EOL;
+});
+echo "9".PHP_EOL;
+exit;
 
+// $msg =  "test data 001.";
+// $redis = new Redis();
+//         $redis->connect('127.0.0.1', 6379) or die ('redis connect fail.');
+//         /* String */
+//         $key = hash("crc32",date("Ymd"));
+//         $rs = $redis->get($key);
+//         if(!empty($rs)){
+//             $r = json_decode($rs,true);
+//         }
+//         $r[$key] = [hash("crc32",$msg)=>$msg];
+//         // echo json_encode($r).PHP_EOL;
+//         $redis->set($key,json_encode($r),3600);
+//         $t = $redis->get($key);
+//         echo $t.PHP_EOL;
+
+// exit;
+
+go(function () {
+    for($i=0;$i<1000;$i++){
+        $postArr = array($i=>$i);
+        $curlObj = curl_init();
+        curl_setopt($curlObj, CURLOPT_POSTFIELDS, $postArr);
+        curl_setopt($curlObj, CURLOPT_URL, "http://test/log.php");
+        curl_setopt($curlObj, CURLOPT_RETURNTRANSFER, true);
+        // curl_setopt($curlObj, CURLOPT_SSL_VERIFYPEER, FALSE);	// 支持HTTPS
+        // curl_setopt($curlObj, CURLOPT_SSL_VERIFYHOST, FALSE);
+        $jsonArr = curl_exec($curlObj);
+        curl_close($curlObj);
+    }
+});
+
+
+exit;
+
+$a = array( 'one' );
+$a[] =& $a;
+xdebug_debug_zval( 'a' );
+
+exit;
+$privateKey = "51d2a2e673d6449102bac3e28d0ef92b";
+$cityid = 201;
+$caridArr = [24094798];
+$postData['params'] = ['cityid'=>$cityid, 'carid'=>$caridArr];
+	    ksort($postData['params']); // 按照 key 进行 asc 排序
+	    $str = '';
+	    foreach ($postData['params'] as $key => $value) {
+	        $value = is_array($value) ? implode('_',$value) : $value;
+	        $tmp_str = $key . '=' . $value . '&';
+	        $str .= $tmp_str;
+	    }
+	    $str = substr($str, 0, -1);
+        $postData['sn'] = md5(md5($str).$privateKey);
+        echo json_encode($postData,true);
+        exit;
+
+
+function cutNum($total,$div){
+	$min=30;
+	for($i=$div;$i>0;$i--){
+		if($i==1){
+			$back[$i]=$total;
+			break;
+		}
+		$max=round($total/$i,2);
+		$res=$min + mt_rand() / mt_getrandmax() * ($max - $min);
+		$total=$total-$res;
+		$back[$i]=$res;
+	}
+	return $back;
+
+}
+
+$res = cutNum(32, 5);
+print_r($res);
+exit;
+
+
+
+echo md5('mobile=14528278974m&8*^%$Ji3#');
+exit;
+
+function getBatchCreditStatus ($mobiles = [])
+    {
+        $creditSecret =  'm&8*^%$Ji3#';
+        echo  $creditSecret."<br>";
+        $data['mobile'] = "14528278974";
+        ksort($data);
+        $joined = http_build_query($data);
+        $appended = $joined.$creditSecret;
+        echo  $appended."<br>";
+        $urlDecoded = urldecode($appended);
+        echo $urlDecoded."<br>";
+        $sign = md5($urlDecoded);
+        $apiKeySeq = [20, 15, 0, 3, 1, 5];
+        $myApiKey = '';
+        echo $sign."<br>";
+        foreach ($apiKeySeq as $index) {
+            $myApiKey .= $sign[$index];
+        }
+        exit;
+        echo $myApiKey;exit;
+        $data['_apikey'] = $myApiKey;
+        $CI->load->library('ycurl');
+        $jsonData = $CI->ycurl->post($creditUrl,$data);
+        $arrData  = json_decode($jsonData, true);
+
+        $creditStatus = $CI->config->item('user_credit_status');
+        if ($arrData['code'] === 1) {
+            if ($arrData['data']) {
+                $arr = [];
+                foreach ($arrData['data'] as $v) {
+                    $arr[$v['bank_phone']]['credit_status_val'] = $creditStatus[$v['status']];
+                    $arr[$v['bank_phone']]['credit_status'] = $v['status'];
+                }
+                return $arr;
+            }
+            return [];
+        } else {
+            return [];
+        }
+    }
+    getBatchCreditStatus();
+
+    exit;
+
+
+$params = [
+    'carid' => 11427664,
+    'user_cityid' => 201,
+    'b_end_use' => 1
+];
+function get_api_token($params)
+    {
+        $ApiKey = "51d2a2e673d6449102bac3e28d0ef92b";
+        ksort($params); // 按照 key 进行 asc 排序
+        $str = '';
+        foreach ($params as $key => $value) {
+            $value = is_array($value) ? implode('_', $value) : $value;
+            $tmp_str = $key . '=' . $value . '&';
+            $str .= $tmp_str;
+        }
+        $str = substr($str, 0, count($str) - 2);
+        $api_token = md5(md5($str) . $ApiKey);
+        echo $api_token;
+        return $api_token;
+    }
+    get_api_token($params);
+exit;
+
+// $str = "";
+// $string = "abc";
+// $len = strlen($string);
+// for ($i = 0; $i < $len; $i++) {
+//     echo "ord->".ord($string{$i}).PHP_EOL;
+//     echo "chr->".chr(ord($string{$i}) + (ord($string{$i}))).PHP_EOL;
+//     $str .= chr(ord($string{$i}) + (ord($string{$i})) % 256);
+//     echo $str.PHP_EOL;
+    
+// }
+// echo $str.PHP_EOL;
+
+
+
+echo chr(30+31);
+exit;
+
+$str = "abcdefg";
+echo substr($str, 0, -1);
+
+exit;
+
+$a = 12.123456;
+
+echo sprintf("%.4f",$a);
+
+exit; 
+
+$sign = md5("123af231s");
+echo $sign."<br>";
+$apiKeySeq = [20, 15, 0, 3, 1, 5];
+$myApiKey = '';
+foreach ($apiKeySeq as $index) {
+    echo $sign[$index]."<br>";
+    $myApiKey .= $sign[$index];
+}
+
+
+exit;
+print_r($_REQUEST);
+
+exit;
+if($b ==2){
+        echo 123;exit;
+}
+
+if ($a == 1){
+        echo "123";
+}
+
+sleep(10);
+
+try{
+    $a = 0;
+    if($a == 1 && !empty($x) && $x == 0){
+        echo 1;
+    }
+}catch(Exception $e){
+var_dump($e);
+}
+echo "over";
+exit;
+
+$w_day = empty(date('w')) ? 7 : date('w');
+        $time = empty($w_day) ? time() : strtotime("-{$w_day} day");
+        $start_date = date('Y-m-d',$time);
+        echo $start_date;
+exit;
+
+$conversion_rate = round(6/300*100,2);
+        echo $conversion_rate;
+        exit;
+
+$day = '2019-11-10';
+$day = date('Y-m-d');
+$w_day = empty(date('w',strtotime($day))) ? 7 : date('w',strtotime($day));
+$end_date = date('Y-m-d',strtotime("-{$w_day} day"));
+echo $w_day;
+exit;
 
 $max = 9;
 for($i=0;$i<$max;$i++){
@@ -34,7 +273,7 @@ $time = strtotime('-4 day');
         exit;
 
 $param920 = 2;
-echo empty($param920) ?? 1;
+// echo empty($param920) ?? 1;
 exit;
 
 
