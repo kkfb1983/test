@@ -12,6 +12,6 @@ if(empty($rs)){
 $r = json_decode($rs,true);
 foreach($r as $k=>$v){
         echo $k."->".json_encode($v);
-        echo PHP_EOL;
+        echo "<br>".PHP_EOL;
 }
 

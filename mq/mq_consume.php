@@ -58,20 +58,22 @@ function receive($envelope, $queue) {
     $msg = $envelope->getBody();
     
     go(function() use($msg){
-        // $redis = new Redis();
-        // $redis->connect('127.0.0.1', 6379);
-        $redis = new Co\Redis();
-        $redis->connect('127.0.0.1', 6379);
+         $redis = new Redis();
+         $redis->connect('127.0.0.1', 6379);
+//        $redis = new Co\Redis();
+//        $redis->connect('127.0.0.1', 6379);
         /* String */
         $key = hash("crc32",date("Ymd"));
         $rs = $redis->get($key);
+        $c[$key] = [];
         if(!empty($rs)){
             $r = json_decode($rs,true);
         }
-        $r[$key] = [hash("crc32",json_encode($msg).rand(1000,9999))=>$msg];
+        $r[$key][md5(json_encode($msg).rand(1000,9999))] = $msg;
+        echo "data->".json_decode($r).PHP_EOL;
         $redis->set($key,json_encode($r),3600);
         $t = $redis->get($key);
-        echo "redis data->".$t.PHP_EOL;
+//        echo "redis data->".$t.PHP_EOL;
     });
     $queue->ack($envelope->getDeliveryTag());
 }
